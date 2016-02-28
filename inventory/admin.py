@@ -11,7 +11,7 @@ class BrandAdmin(admin.ModelAdmin):
 @admin.register(Camera)
 class CameraAdmin(admin.ModelAdmin):
     list_display = ('model', 'brand', 'megapixel',)
-    search_fields = ('model', 'brand',)
+    search_fields = ('model', 'brand__name',)
     list_filter = ('megapixel',)
 
 
