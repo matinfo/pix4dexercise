@@ -7,7 +7,7 @@
     <div class="row">
         {% include "inventory/include/header.html" %}
         <div class="col-md-6">
-            <h1>Restricted Zone</h1>
+            <h1>Login</h1>
             <form action="{% url "user-login-form" %}" method="post">{% csrf_token %}
                 <fieldset>
                     {% bootstrap_form form %}
