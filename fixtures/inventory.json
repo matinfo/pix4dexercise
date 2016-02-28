@@ -1,0 +1,218 @@
+[
+{
+    "model": "inventory.brand",
+    "pk": 1,
+    "fields": {
+        "name": "GoPro"
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 2,
+    "fields": {
+        "name": "DJI"
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 3,
+    "fields": {
+        "name": "Polaroid"
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 4,
+    "fields": {
+        "name": "SenseFly"
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 5,
+    "fields": {
+        "name": "3DR"
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 1,
+    "fields": {
+        "model": "Zemmuse 5X",
+        "brand": 2,
+        "megapixel": 16.0
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 2,
+    "fields": {
+        "model": "Zemmuse 5XR",
+        "brand": 2,
+        "megapixel": 16.0
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 3,
+    "fields": {
+        "model": "Zenmuse X3",
+        "brand": 2,
+        "megapixel": 12.4
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 4,
+    "fields": {
+        "model": "HERO4 Black",
+        "brand": 1,
+        "megapixel": 12.0
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 5,
+    "fields": {
+        "model": "HERO4 Silver",
+        "brand": 1,
+        "megapixel": 12.0
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 6,
+    "fields": {
+        "model": "HERO4 Session",
+        "brand": 1,
+        "megapixel": 8.0
+    }
+},
+{
+    "model": "inventory.camera",
+    "pk": 7,
+    "fields": {
+        "model": "x4303",
+        "brand": 3,
+        "megapixel": 8.0
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 1,
+    "fields": {
+        "model": "Phantom 3 Pro",
+        "brand": 2,
+        "serial_number": "7567576HJLKLK",
+        "added_date": "2016-02-27T21:22:11.208Z",
+        "cameras": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 2,
+    "fields": {
+        "model": "Phantom 3 4K",
+        "brand": 2,
+        "serial_number": "746757GHH7656465",
+        "added_date": "2016-02-27T21:22:53.427Z",
+        "cameras": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 3,
+    "fields": {
+        "model": "Inspire 1 Pro",
+        "brand": 2,
+        "serial_number": "76576SDDSG5679",
+        "added_date": "2016-02-27T21:24:13.613Z",
+        "cameras": [
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 4,
+    "fields": {
+        "model": "eBee",
+        "brand": 4,
+        "serial_number": "SFY6782356",
+        "added_date": "2016-02-27T21:25:25.580Z",
+        "cameras": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 5,
+    "fields": {
+        "model": "eBee Ag",
+        "brand": 4,
+        "serial_number": "SFY6787657",
+        "added_date": "2016-02-27T21:25:50.773Z",
+        "cameras": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 6,
+    "fields": {
+        "model": "eBee eXom",
+        "brand": 4,
+        "serial_number": "SFY6782239",
+        "added_date": "2016-02-27T21:26:13.097Z",
+        "cameras": [
+            3,
+            6
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 7,
+    "fields": {
+        "model": "eBee RTK",
+        "brand": 4,
+        "serial_number": "SFY6782377",
+        "added_date": "2016-02-27T21:26:35.036Z",
+        "cameras": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "inventory.drone",
+    "pk": 8,
+    "fields": {
+        "model": "Solo",
+        "brand": 5,
+        "serial_number": "3DR567890",
+        "added_date": "2016-02-27T21:29:50.815Z",
+        "cameras": [
+            4,
+            5,
+            6
+        ]
+    }
+}
+]

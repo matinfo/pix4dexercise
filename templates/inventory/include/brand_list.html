@@ -1,0 +1,21 @@
+{% load bootstrap3 %}        
+        <div class="col-md-6">
+            <h2>All brands</h2>
+            <table class="table table-striped">
+                <thead>
+                    <th>Name</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                {% for object in object_list %}
+                    <tr>
+                        <td>{{ object.name }}</td>
+                        <td class="text-right">
+                            <a role="button" href="{{ object.get_absolute_url }}"><span class="badge alert-success">{% bootstrap_icon "pencil" %} Edit</span></a>
+                            {% if object.num_linked == 0 %}<a role="button" href="{{ object.get_absolute_url }}delete/"><span class="badge alert-danger">{% bootstrap_icon "trash" %} Remove</span></a>{% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>

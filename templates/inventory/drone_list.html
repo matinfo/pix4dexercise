@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles sekizai_tags bootstrap3 %}
+
+{% block extend_base %}
+
+{% addtoblock "css" %}<link rel="stylesheet" href="{% static 'css/theme.bootstrap.min.css' %}">{% endaddtoblock %}
+
+<div class="container">
+    {% with 1 as drone_inventory %}
+    {% include "inventory/include/header.html" %}
+    {% endwith %}
+    <div class="spacer"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+            <table class="table table-sorter">
+                <thead>
+                    <th class="sorter-false filter-false">#</th>
+                    <th>Name</th>
+                    <th class="filter-select filter-exact" data-placeholder="Pick a brand">Brand</th>
+                    <th>SN</th>
+                    <th>Compatible camera(s)</th>
+                    {% if user.is_authenticated %}<th class="sorter-false"></th>{% endif %}
+                </thead>
+                <tbody>
+                {% for object in object_list %}
+                <tr>
+                    <td>{{ object.id }}</td>
+                    <td>{{ object.model }}</td>
+                    <td>{{ object.brand }}</td>
+                    <td>{{ object.serial_number }}</td>
+                    <td>
+                    {% for camera in object.cameras.all %}
+                        {{ camera.model }}, {{ camera.brand }}, {{ camera.megapixel|floatformat:"-1"}} MP{% if not forloop.last %}<br>{% endif %}
+                    {% endfor %}
+                    </td>
+                    {% if user.is_authenticated %}<td class="text-center">
+                        <a role="button" href="{{ object.get_absolute_url }}"><span class="badge alert-success">{% bootstrap_icon "pencil" %} Edit</span></a>
+                        
+                        <a role="button" href="{{ object.get_absolute_url }}delete/"><span class="badge alert-danger">{% bootstrap_icon "trash" %} Remove</span></a>
+                    </td>{% endif %}
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="spacer-lg"></div>
+</div>
+
+{% addtoblock "js" %}<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>{% endaddtoblock %}
+{% addtoblock "js" %}<script src="{% static 'js/jquery.tablesorter.widgets.min.js' %}"></script>{% endaddtoblock %}
+{% addtoblock "js" %}
+<script>
+$(function() {
+
+    $("table.table-sorter").tablesorter({
+        theme : 'bootstrap',
+        widthFixed: false,
+        headerTemplate : '{content} {icon}',
+        widgets : ['uitheme', 'filter', 'zebra'],
+
+        widgetOptions : {
+            zebra : ["even", "odd"],
+            filter_reset : ".reset",
+            filter_cssFilter: "form-control"
+        }
+    });
+
+    $('.tablesorter-filter-row').find('td:first-child').html('');
+    {% if user.is_authenticated %}$('.tablesorter-filter-row').find('td:last-child').html('');{% endif %}
+});
+</script>
+{% endaddtoblock %}
+
+{% endblock extend_base %}

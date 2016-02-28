@@ -1,0 +1,31 @@
+{% load bootstrap3 %}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Inventory</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+            <li{% if drone_inventory %} class="active"{% endif %}><a href="{% url "inventory-drone-list" %}">Drones</a></li>
+            <li{% if camera_inventory %} class="active"{% endif %}><a href="{% url "inventory-camera-list" %}">Cameras</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {% if drone_inventory or camera_inventory %}<li><button type="button" class="reset btn btn-primary navbar-btn" data-column="0" data-filter=""><i class="icon-white icon-refresh glyphicon glyphicon-refresh"></i> Reset filters</button></li>{% endif %}
+            {% if user.is_authenticated %}<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% bootstrap_icon "plus" %} Add <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url "inventory-drone" %}">Add Drone</a></li>
+                    <li><a href="{% url "inventory-camera" %}">Add Camera</a></li>
+                    <li><a href="{% url "inventory-brand" %}">Add Brand</a></li>
+                </ul>
+            </li>{% endif %}
+        </ul>
+    </div>
+  </div>
+</nav>

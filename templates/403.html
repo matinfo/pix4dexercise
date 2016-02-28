@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block extend_base %}
+<div class="container">
+    <div class="spacer hidden-xs"></div>
+    <div class="row">
+        {% include "inventory/include/header.html" %}
+        <div class="col-md-12">
+            <h1>403 - Permission denied</h1>
+            <p>You don't have access here! Go to <a href="/">home</a>.</p>
+        </div>
+    </div>
+    <div class="spacer-lg"></div>
+</div>
+{% endblock extend_base %}
