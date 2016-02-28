@@ -13,7 +13,7 @@
                     {% bootstrap_form form %}
                     {% buttons %}
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="submit" class="btn btn-default" onclick="javascript:window.history.back()">Cancel</button>
+                        <button type="submit" class="btn btn-default" onclick="javascript:window.history.back();return false;">Cancel</button>
                     {% endbuttons %}
                 </fieldset>
             </form>
