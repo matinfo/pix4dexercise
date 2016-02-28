@@ -14,7 +14,7 @@ all:
 
 install:
 	virtualenv $(ENV) -p python2 --prompt="(`basename \`pwd\``)"
-	pip install -r $(REQUIREMENT)
+	source env/bin/activate && pip install -r $(REQUIREMENT)
 
 server:
 	$(MANAGE) runserver 127.0.0.1:$(PORT)
