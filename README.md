@@ -10,4 +10,4 @@ Needs to implement a small web application for the inventory of its drones and c
 2. A web page to see the list of drones registered. In this page it could help also to have some kind of filtering (e.g. by name, brand, camera megapixel, etc) as well as the ability to change the order of the results.
 Note that the whole company should be able to see the list, but only support member should be able to register a new drone.
 
-And more :-)
+And more, try demo here: https://pix4dexercise.herokuapp.com/
