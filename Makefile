@@ -29,5 +29,4 @@ ifdef CREATE
 endif
 	heroku config:set --app pix4dexercise DJANGO_SETTINGS_MODULE=settings.heroku
 	git push heroku master
-	heroku run python manage.py migrate
 	heroku open
