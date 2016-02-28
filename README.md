@@ -3,7 +3,7 @@
 Pix4D Exercise - Maintain inventory of *drone* and *camera*
 ###########################################################
 
-Exercise:
+
 ********
 
 Needs to implement a small web application for the inventory of its drones and cameras. The application will include the following features:
