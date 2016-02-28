@@ -3,6 +3,9 @@
 Pix4D Exercise - Maintain inventory of *drone* and *camera*
 ###########################################################
 
+Exercise:
+********
+
 Needs to implement a small web application for the inventory of its drones and cameras. The application will include the following features:
 
 1. A web page to register a new drone. Whenever a new drone arrives to the company, someone from the support team will use the feature to register it by adding all the needed data. This should include at least: name, brand, serial number, different type of supported cameras (ex: phantom, DJI, x4303,hero3). The camera’s main parameters are the model, megapixel number and the brand (ex: hero3, 12MP,gopro).
