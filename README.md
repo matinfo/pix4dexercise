@@ -1,7 +1,6 @@
 # pix4dexercise
 
 Pix4D Exercise - Maintain inventory of *drone* and *camera*
-###########################################################
 
 
 ********
